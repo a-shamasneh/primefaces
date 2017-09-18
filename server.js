@@ -7,20 +7,17 @@ require('./server/config/routes.js') (app,express);
 //=============================================================================
 /*									Database								 */
 //=============================================================================
-	var mongoURI ="mongodb://mais:1234@ds019866.mlab.com:19866/adhouse";
+	var mongoURI ='mongodb://shamasneh:jyose2017@ds133084.mlab.com:33084/tracking';
 	mongoose.connect(mongoURI);
 	db = mongoose.connection;
 
 	db.once('open',function () {
-		console.log('... mongoDB  adhouse is open');
+		console.log('... mongoDB  tracking is open');
 	});
 //=============================================================================
 /*									Server   								 */
 //=============================================================================
 
 	var port = process.env.PORT || 4002;
-
 	app.listen(port);
-		
-	// 'mongodb://mais:1234@ds019866.mlab.com:19866/adhouse';
-module.exports = app;
+    module.exports = app;
